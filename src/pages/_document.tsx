@@ -1,6 +1,9 @@
 import React from 'react';
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document'
+
 import { ServerStyleSheet } from 'styled-components';
+import Copyrigth from '../assets/copyrigth.svg';
+import Container from '../styles/container';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -36,14 +39,22 @@ export default class MyDocument extends Document {
       <Html lang="PT-BR">
         <Head>
           <meta charSet="utf-8"/>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet" />
           <link rel="shortcut icon" href="https://res.cloudinary.com/andreimagens/image/upload/v1625249601/logo_5bfc398a62.svg" type="image/x-icon" />
         </Head>
 
         <body>
-          <Main />
-          <NextScript />
-        </body>
+          <Container>
+            <Main />
+            <NextScript />
 
+            <footer>
+              <Copyrigth />
+              <p>Direitos resevados 2021 | André Viana</p>
+            </footer>
+          </Container>
+        </body>
       </Html>
     )
   }

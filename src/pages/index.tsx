@@ -1,22 +1,30 @@
 import React from 'react';
-import Head from 'next/head';
 
-import Logo from '../../public/logo.svg'
-import { Container } from '../styles/pages/Home';
+import loadPosts from '../services/loadPosts';
+import { pageLinks } from '../config/index';
+import Links from '../templates/Links'
+import ContextLink from '../context/ContextLinks'
+import { GetStaticProps } from 'next';
+import HomeProps from '../types/HomeProps'
 
-const Home: React.FC = () => {
+const Home: React.FC<HomeProps> = ({ data }) => {
   return (
-    <Container>
-      <Head>
-        <title>My App</title>
-      </Head>
-      <Logo />
-      <h1>André Gustavo Viana</h1>
-      <p>
-        Configuração de Ambiente de desenvolvimento para as tecnologias NextJS + Typescript.
-      </p>
-    </Container>
+    <ContextLink.Provider value={{ data }} >
+      <Links />
+    </ContextLink.Provider>
   );
 };
+
+
+// SSG
+export const getStaticProps: GetStaticProps<unknown> = async () => {
+  const data = await loadPosts(pageLinks.url);
+
+  return {
+    props: {
+      data,
+    }
+  }
+}
 
 export default Home;
