@@ -1,13 +1,18 @@
 import React from 'react';
 
 import StyledTitle from './styled';
-import { TitleProps } from '../../../types/types'
 
-const Title: React.FC<TitleProps> = ({ sectionTitle, description }) => {
+type TitleProps = {
+  sectionTitle: string,
+  description?: string,
+  effect: boolean,
+}
+
+const Title: React.FC<TitleProps> = ({ sectionTitle, description, effect }) => {
   return (
     <div>
       <StyledTitle>
-        <div></div>
+        { effect ? <div></div> : '' }
         <h1>{sectionTitle}</h1>
         <p>{description}</p>
       </StyledTitle>

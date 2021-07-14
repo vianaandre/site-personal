@@ -1,5 +1,15 @@
 // next.config.js
 const withImages = require('next-images')
-module.exports = withImages({
-  esModule: true
+
+const config = withImages({
+  esModule: true,
 })
+
+module.exports = {
+  config,
+  trailingSlash: true,
+}
+
+
+
+

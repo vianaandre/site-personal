@@ -12,17 +12,22 @@ const StyledButton = styled.div`
     padding: ${props => props.theme.spacing(.5)} 0;
     cursor: pointer;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     a {
       font-family: ${props => props.theme.fonts.family.primary}, ${props => props.theme.fonts.family.secondary}, ${props => props.theme.fonts.family.tertiary};
       font-size: ${props => props.theme.spacing(1.75)};
       color: ${props => props.theme.colors.white};
       font-weight: 550;
+
+      text-transform: uppercase;
     }
   }
 
   &:hover {
-      transform: scale(1.07);
-      transition: 400ms;
+      transform: scale(1.03);
     }
 
 `;

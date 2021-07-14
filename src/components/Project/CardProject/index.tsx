@@ -13,7 +13,7 @@ const CardProject: React.FC<CardProps> = ({ imageProject, titleProject, buttonAc
         <h2>{titleProject.sectionTitle}</h2>
         <div className="buttons">
           {buttonActions.map(( { href, target, title, id } ) => (
-            <Button  key={id} href={href} target={target} title={title} color={theme.colors.primary} width={theme.spacing(14)} />
+            <Button  key={id}  download={''} font={theme.spacing(1.75 )} height={theme.spacing(3.75)} href={href} target={target} title={title} color={theme.colors.primary} width={theme.spacing(14)} />
           ) )}
         </div>
         <div className="casesImages">

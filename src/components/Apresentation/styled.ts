@@ -7,7 +7,7 @@ const StyledApresentation = styled.div`
   padding: 0;
   position: relative;
 
-  background-color: rgba(34, 55, 255, 0.2);
+  background-color: rgba(34, 55, 255, 0.3);
 
   border-radius: 5px;
 

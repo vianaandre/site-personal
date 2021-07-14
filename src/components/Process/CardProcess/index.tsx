@@ -1,9 +1,19 @@
 import React from 'react';
 
-const CardProcess: React.FC = () => {
+import StyledCardProcess from './styled';
+
+type CardProcess = {
+  href: string;
+  alt: string;
+  text: string;
+}
+
+const CardProcess: React.FC<CardProcess> = ({ href, alt, text }) => {
   return (
-    <h1>
-    </h1>
+    <StyledCardProcess>
+      <img src={href} alt={alt} />
+      <div dangerouslySetInnerHTML={{__html: text}}></div>
+    </StyledCardProcess>
   )
 }
 

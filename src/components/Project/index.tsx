@@ -13,7 +13,7 @@ const Project: React.FC = () => {
 
   return (
     <StyledProject>
-      <Title sectionTitle={data.sections[2].Title.sectionTitle} description={data.sections[2].Title.description} />
+      <Title sectionTitle={data.sections[2].Title.sectionTitle} description={data.sections[2].Title.description} effect={true} />
       <div className={'cardProject'}>
         {cardData.map(({ imageProject, titleProject, buttonActions, cases, id }) => (
           <div key={id} className={'card'}>

@@ -29,3 +29,13 @@ export type CardProcessProps = {
   text: string,
   image: ImageProps,
 }
+
+export type FormProps = {
+  value: string;
+  type?: string;
+  placeholder: string;
+  id: string;
+  error: string;
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: () => void;
+}
