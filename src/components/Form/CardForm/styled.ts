@@ -6,6 +6,16 @@ const StyledCardForm = styled.div`
     margin-top: ${props => props.theme.spacing(1)};
     margin-left: ${props => props.theme.spacing(1)};
 
+    @media(max-width: 1279px) and (min-width: 768px) {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    @media(max-width: 767px) {
+      margin-left: 0;
+      margin-top: ${props => props.theme.spacing(3)};
+    }
+
     .nameTel {
 
       display: flex;
@@ -15,6 +25,14 @@ const StyledCardForm = styled.div`
       input {
         width: 24vw;
         min-width: 300px;
+      }
+
+      @media(max-width: 767px) {
+        flex-direction: column;
+      }
+
+      @media(max-width: 767px) {
+        gap: 0;
       }
     }
 
@@ -38,6 +56,12 @@ const StyledCardForm = styled.div`
         outline: none;
         box-shadow: none;
       }
+
+      @media(max-width: 767px) {
+        width: 300px;
+        min-width: 200px;
+        margin-bottom: ${props => props.theme.spacing(3)};
+      }
     }
 
     button {
@@ -56,6 +80,14 @@ const StyledCardForm = styled.div`
 
       &:hover {
         transform: scale(1.03);
+      }
+
+      @media(max-width: 767px) {
+        width: 100%;
+
+        &:hover {
+          transform: none;
+        }
       }
     }
   }

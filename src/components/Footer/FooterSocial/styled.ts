@@ -2,10 +2,17 @@ import styled from 'styled-components';
 
 
 const StyledFooterSocial = styled.div`
+
   .linkEmail {
     p {
       display: flex;
       margin-top: ${props => props.theme.spacing(1.75)};
+      color: ${props => props.theme.colors.colorText};
+      font-weight: 600;
+
+      @media(max-width: 767px) {
+        margin-top: ${props => props.theme.spacing(2)}
+      }
     }
 
     p::before {
@@ -24,8 +31,13 @@ const StyledFooterSocial = styled.div`
 
     margin-top: ${props => props.theme.spacing(3.75)};
 
+    @media(max-width: 767px) {
+      margin-top: ${props => props.theme.spacing(3)};
+    }
+
     ul {
       display: flex;
+      justify-content: space-between;
     }
   }
 

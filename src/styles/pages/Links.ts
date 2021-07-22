@@ -18,6 +18,7 @@ export const LinksStyled = styled.div`
         text-align: center;
 
         color: ${props => props.theme.colors.colorText};
+        margin-top: ${props => props.theme.spacing(2)};
 
         @media(max-width: 767px) {
           font-size:  ${props => props.theme.spacing(2)};

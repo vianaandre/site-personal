@@ -4,6 +4,10 @@ const StyledCardSkills = styled.div`
   text-align: center;
   width: ${props => props.theme.spacing(20)};
 
+  @media(max-width: 767px) {
+    margin-top: ${props => props.theme.spacing(4)};
+  }
+
   h2 {
     font-family: ${props => props.theme.fonts.family.primary}, ${props => props.theme.fonts.family.secondary}, ${props => props.theme.fonts.family.tertiary};
     font-size: ${props => props.theme.spacing(3)};

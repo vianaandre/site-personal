@@ -2,21 +2,18 @@ import React from 'react';
 
 import StyledCardSkills from './styled';
 
-import { ImageProps } from '../../../types/types';
+import { CardSkillsProps } from '../../../types/types';
 
-type TextProps = {
-  name: string,
-  caseDescription: string,
-}
-
-type CardSkillsProps = TextProps & ImageProps;
-
-const CardSkills: React.FC<CardSkillsProps> = ({ url, alternativeText, name, caseDescription }) => {
+const CardSkills: React.FC<CardSkillsProps> = ({ icon, text, title }) => {
   return (
     <StyledCardSkills>
-      <img src={url} alt={alternativeText} />
-      <h2>{name}</h2>
-      <div className="explicationCase" dangerouslySetInnerHTML={{__html: caseDescription}}></div>
+      <img src={icon.url} alt={icon.alt} />
+      <h2>{title}</h2>
+      <div className="explicationCase" >
+        <p>
+          {text}
+        </p>
+      </div>
     </StyledCardSkills>
   )
 }

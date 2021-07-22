@@ -13,7 +13,7 @@ const Title: React.FC<TitleProps> = ({ sectionTitle, description, effect }) => {
     <div>
       <StyledTitle>
         { effect ? <div></div> : '' }
-        <h1>{sectionTitle}</h1>
+        <h2>{sectionTitle}</h2>
         <p>{description}</p>
       </StyledTitle>
     </div>

@@ -11,10 +11,20 @@ const StyledResponse = styled.div`
 
     margin-top: ${props => props.theme.spacing(1)};
 
+    @media (max-width: 767px) {
+      margin-top: ${props => props.theme.spacing(3)};
+      padding: ${props => props.theme.spacing(4)};
+      padding-right: ${props => props.theme.spacing(2)};
+    }
+
     p {
       font-size: ${props => props.theme.spacing(4)};
       font-family: ${props => props.theme.fonts.family.primary}, ${props => props.theme.fonts.family.secondary}, ${props => props.theme.fonts.family.tertiary};
       font-weight: 600;
+
+      @media (max-width: 767px) {
+        font-size: ${props => props.theme.spacing(3)};
+      }
     }
 
     svg {
@@ -32,6 +42,10 @@ const StyledResponse = styled.div`
       max-width: 800px;
       height: 420px;
       border-radius: 5px;
+
+      @media (max-width: 767px) {
+        margin-top: ${props => props.theme.spacing(3)};
+      }
   }
 `
 

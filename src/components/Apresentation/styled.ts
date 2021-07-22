@@ -7,32 +7,50 @@ const StyledApresentation = styled.div`
   padding: 0;
   position: relative;
 
-  background-color: rgba(34, 55, 255, 0.3);
+  @media(max-width: 1279px) and (min-width: 1025px) {
+    width: 1024px;
+  };
+
+  @media(max-width: 1024px) and (min-width: 768px) {
+    width: 768px;
+  };
+
+  @media(max-width: 767px) {
+    width: 300px;
+  }
+
 
   border-radius: 5px;
 
+  padding: ${props => props.theme.spacing(5)} 0;
+
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
-  margin-top: ${props => props.theme.spacing(8)};
-  padding: ${props => props.theme.spacing(6)} 0;
+  .block {
+    height: ${props => props.theme.spacing(20)};
+    width: 5px;
+    background-color: ${props => props.theme.colors.primary};
+    border-radius: 10px;
+  }
 
-  position: relative;
-  display: flex;
-  justify-content: space-around;
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
 
   @media(max-width: 1024px) and (min-width: 768px) {
-    padding: ${props => props.theme.spacing(4)} ${props => props.theme.spacing(1.5)} ;
-
-    .img {
-      width: 50%;
+    .block {
+      height: ${props => props.theme.spacing(15)};
     }
-  }
+    }
 
   @media(max-width: 767px) {
     .img {
       display: none;
-    };
+    }
 
     background-color: transparent;
     padding: 0 0;

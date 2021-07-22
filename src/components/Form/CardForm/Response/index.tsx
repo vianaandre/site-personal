@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import { CircularProgress } from '@material-ui/core';
 import StyledResponse from './styled';
@@ -14,8 +14,16 @@ type ResponseProps = {
 }
 
 const Response: React.FC<ResponseProps> = ({ response, colorFont, colorBackground }) => {
-
+  const [ documentWidth, setDocumentWidth ] =useState(Boolean);
   const { loading, request } = useContext(ContextForm)
+
+  useEffect(() => {
+    const document = window.innerWidth;
+
+    const documentSize = document > 767 ? true : false
+
+    setDocumentWidth(documentSize)
+  })
 
   return (
     <StyledResponse>
@@ -26,7 +34,7 @@ const Response: React.FC<ResponseProps> = ({ response, colorFont, colorBackgroun
         </p>
         {request ? <Sucess /> : <Error />}
       </div> : <div className="circularProgress" >
-        <CircularProgress size={100} style={{ color: theme.colors.primary}} />
+        <CircularProgress size={documentWidth ? 100 : 60} style={{ color: theme.colors.primary}} />
       </div>
       }
 

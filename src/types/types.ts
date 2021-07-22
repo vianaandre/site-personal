@@ -1,9 +1,8 @@
 export type LinksProps = {
-  id?: string,
+  number?: number;
+  to?: string;
   title: string,
   href: string,
-  target: string,
-  name?: string,
 }
 
 export type TitleProps = {
@@ -11,17 +10,26 @@ export type TitleProps = {
   description?: string,
 }
 
+export type CardSkillsProps = {
+  icon: {
+    url: string,
+    alt: string,
+  }
+  title: string,
+  text: string,
+}
+
 export type ImageProps = {
-  alternativeText: string,
   url: string,
+  alt: string,
 }
 
 export type CardProps = {
-  id?: string,
-  imageProject: { image: ImageProps },
-  titleProject: TitleProps,
-  buttonActions: Array<LinksProps>,
-  cases: Array<{ image: ImageProps }>
+  url: string,
+  alt: string,
+  description: string,
+  button,
+  icon
 }
 
 export type CardProcessProps = {
@@ -38,4 +46,11 @@ export type FormProps = {
   error: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur: () => void;
+}
+export type CardLinkProps = {
+  img: string;
+  alt: string;
+  href: string;
+  target: string;
+  description: string;
 }

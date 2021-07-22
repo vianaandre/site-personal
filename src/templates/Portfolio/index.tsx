@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import Head from 'next/head'
-import ContextPortfolio from "../../context/ContextPortfolio";
 import Header from '../../components/Header'
 import PortfolioStyled from "../../styles/pages/Portfolio";
 import NavBar from '../../components/NavBar';
@@ -12,18 +11,14 @@ import About from '../../components/About';
 import Skills from '../../components/Skills';
 import Form from '../../components/Form';
 import Footer from '../../components/Footer';
+import ButtonFloat from "../../components/ButtonFloat";
 
 const TemplatePortfolio: React.FC = () => {
-
-  const { data } = useContext(ContextPortfolio)
-
-  console.log(data)
-
   return (
       <PortfolioStyled>
         <Head>
 
-          <title>{data.title}</title>
+          <title>André | Portfólio</title>
 
         </Head>
         <Header />
@@ -35,6 +30,7 @@ const TemplatePortfolio: React.FC = () => {
         <Skills />
         <Form />
         <Footer />
+        <ButtonFloat />
       </PortfolioStyled>
   )
 }

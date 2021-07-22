@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledFooterTitle = styled.h1`
+const StyledFooterTitle = styled.h2`
 
   font-size: ${props => props.theme.spacing(4.5)};
   font-weight: bold;

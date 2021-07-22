@@ -4,39 +4,37 @@ import ContextPortfolio from '../../context/ContextPortfolio';
 import StyledInformation from './styled';
 import Title from '../../components/UI/Title';
 import CardInformation from './CardInformation';
+import information from './data';
 
 const About: React.FC = () => {
 
   const { data } = useContext(ContextPortfolio)
 
-  const {
-    sectionTitle,
-    titleText,
-    text,
-    Information,
-    ButtonCV
-  } = data.sections[4]
-
+  const textsobreContent = data.textsobre.textsobre
 
   return (
-      <StyledInformation>
-        <Title effect={true} sectionTitle={sectionTitle.sectionTitle} description={sectionTitle.description}  />
-        <h2>{titleText}</h2>
+      <StyledInformation id={'about'}>
+        <Title effect={true} sectionTitle={'Sobre'} description={'informações sobre  mim'}  />
+        <h3>{textsobreContent.title}</h3>
         <div className="contentAbout">
           <div className="textAbout">
-            <div className="text" dangerouslySetInnerHTML={{__html: text}}></div>
+            <div className="text">
+              <p>
+                {textsobreContent.text}
+              </p>
+            </div>
           </div>
           <div className="divider"></div>
           <div className="information">
             <ul>
-            {Information.map(( { informationPersonal, image, id } ) => (
-                <CardInformation key={id} url={image.url} alternativeText={image.alternativeText} informationPersonal={informationPersonal} />
+            {information.map(( {  icon, alt, text }, index ) => (
+                <CardInformation key={index} icon={icon} text={text} alt={alt}/>
             ))}
             </ul>
             <button>
-              <a href={'cv_andre.pdf'} target={ButtonCV.target} download={'Currículo - André'}>
+              <a href={'cv_andre.pdf'} target={'black'} download={'Currículo - André'}>
                   <p>
-                    {ButtonCV.title}
+                    Download do meu CV
                   </p>
               </a>
               </button>

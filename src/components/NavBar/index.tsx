@@ -1,22 +1,30 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { Link } from 'react-scroll';
 
-import ContextPortfolio from '../../context/ContextPortfolio';
 import StyledNavBar from './styled';
-import Link from '../Link';
+import LinkNavBar from '../LinkNavBar'
+import { links, linksIcon} from './data';
 
 const NavBar: React.FC = () => {
 
-  const { data } = useContext(ContextPortfolio)
-
   return (
       <StyledNavBar>
-        <div className="links">
-        { data.sections[0].links.map(({ href, target, title, id }) => (
-          <button key={id}>
-            <Link href={href} target={target} title={title}  />
-          </button>
-        ))}
-        </div>
+         <div className="links">
+         { links.map(({ href, title}, index) => (
+           <button key={index}>
+             <LinkNavBar to={href} href={href} title={title}  />
+           </button>
+         ))}
+         </div>
+         <div className='linkIcon'>
+           { linksIcon.map(({ href, icon, alt }, index) => (
+             <div className='link' key={index}>
+               <Link to={href.substring(1, 10)} smooth={true} duration={1200}>
+                 <img src={icon} alt={alt} />
+               </Link >
+             </div>
+           )) }
+         </div>
       </StyledNavBar>
   )
 }

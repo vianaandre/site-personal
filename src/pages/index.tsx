@@ -1,15 +1,16 @@
 import React from 'react';
 
-import loadPosts from '../services/loadPosts';
-import { pageLinks } from '../config/index';
-import Links from '../templates/Links'
+import LinkProps from '../types/typeLink';
 import ContextLink from '../context/ContextLinks'
 import { GetStaticProps } from 'next';
-import HomeProps from '../types/HomeProps'
+import loadDatoCMS from '../services/load-dato-cms';
+import { allLinksQuery } from '../config/queryes';
+import Links from '../templates/Links';
 
-const Home: React.FC<HomeProps> = ({ data }) => {
+const Home: React.FC<LinkProps> = ({ data }) => {
+
   return (
-    <ContextLink.Provider value={{ data }} >
+    <ContextLink.Provider value={{ data }}>
       <Links />
     </ContextLink.Provider>
   );
@@ -18,7 +19,8 @@ const Home: React.FC<HomeProps> = ({ data }) => {
 
 // SSG
 export const getStaticProps: GetStaticProps<unknown> = async () => {
-  const data = await loadPosts(pageLinks.url);
+
+  const data = await loadDatoCMS(allLinksQuery)
 
   return {
     props: {

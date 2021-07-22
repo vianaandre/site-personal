@@ -1,15 +1,15 @@
 import { GetStaticProps } from "next";
 import React from "react";
 
-import loadPosts from '../../services/loadPosts';
-import { pagePortfolio } from '../../config/index';
-import PortfolioProps from '../../types/PortfolioProps';
-import ContextPortfolio from '../../context/ContextPortfolio';
+import loadDatoCMS from '../../services/load-dato-cms';
+import { allCardprojectsQuery, allCardprocessesQuery, textsobreQuery, allCardskillsQuery } from '../../config/queryes';
+import PortfolioProps from '../../types/portfolioCardsProps';
+import ContextPortfolio from "../../context/ContextPortfolio";
 import TemplatePortfolio from '../../templates/Portfolio';
 
 const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
   return (
-    <ContextPortfolio.Provider value={{ data }} >
+    <ContextPortfolio.Provider value={{ data }}>
       <TemplatePortfolio />
     </ContextPortfolio.Provider>
   )
@@ -18,11 +18,19 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
 
 export const getStaticProps: GetStaticProps<unknown> = async () => {
 
-  const data = await loadPosts(pagePortfolio.url);
+  const allCardprojects = await loadDatoCMS(allCardprojectsQuery)
+  const allCardprocesses = await loadDatoCMS(allCardprocessesQuery)
+  const textsobre = await loadDatoCMS(textsobreQuery)
+  const allCardskills = await loadDatoCMS(allCardskillsQuery)
 
   return {
     props: {
-      data,
+      data: {
+        allCardprojects,
+        allCardprocesses,
+        textsobre,
+        allCardskills
+      },
     }
   }
 }

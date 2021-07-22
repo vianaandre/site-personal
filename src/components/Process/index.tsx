@@ -9,13 +9,15 @@ const Process: React.FC = () => {
 
   const { data } = useContext(ContextPortfolio)
 
+  const allCardprocessesContent = data.allCardprocesses
+
   return (
-    <StyledProcess>
-      <Title  sectionTitle={data.sections[3].sectionTitle.sectionTitle} description={data.sections[3].sectionTitle.description} effect={false} />
+    <StyledProcess id={'process'}>
+      <Title  sectionTitle={'Processo de criação'} description={''} effect={false} />
       <div className="cardsProcess">
-        { data.sections[3].CardProcess.map(({ id, text, image }) => (
-          <div key={id} className="card">
-            <CardProcess href={image.url} alt={image.alternativeText} text={text} />
+        { allCardprocessesContent.allCardprocesses.map(({ text, image }, index) => (
+          <div key={index} className="card">
+            <CardProcess number={index} href={image.url} alt={image.alt} text={text} />
           </div>
          )) }
       </div>

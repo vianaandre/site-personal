@@ -1,6 +1,6 @@
 import { createContext } from 'react';
-import HomeProps from '../../types/HomeProps';
+import LinkProp from '../../types/typeLink';
 
-const ContextInitial = createContext({} as HomeProps);
+const ContextInitial = createContext({} as LinkProp);
 
 export default ContextInitial

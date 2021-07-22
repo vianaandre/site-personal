@@ -19,7 +19,7 @@ const Form: React.FC = () => {
 
   return (
     <ContextForm.Provider value={{ sucess, setSucess, loading, setLoading, request, setRequest}}>
-      <StyledForm>
+      <StyledForm id={'Contact'}>
         <Title  sectionTitle={'Contato'} effect={true} description={''} />
         <div className='contentContact'>
           <div className='informationEmail'>

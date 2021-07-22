@@ -1,9 +1,10 @@
 import React from 'react';
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document'
-
+import { ThemeProvider } from 'styled-components';
 import { ServerStyleSheet } from 'styled-components';
+
+import theme from '../styles/theme';
 import Copyrigth from '../assets/copyrigth.svg';
-import Container from '../styles/container';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -33,7 +34,6 @@ export default class MyDocument extends Document {
       sheet.seal()
     }
   }
-
   render(): JSX.Element {
     return (
       <Html lang="PT-BR">
@@ -45,15 +45,16 @@ export default class MyDocument extends Document {
         </Head>
 
         <body>
-          <Container>
+          <ThemeProvider theme={theme}>
             <Main />
             <NextScript />
-
-            <footer>
-              <Copyrigth />
-              <p>Direitos resevados 2021 | André Viana</p>
-            </footer>
-          </Container>
+            <div className='containerCopyrigth'>
+                <div className="copyrigth">
+                  <Copyrigth />
+                  <p>Direitos resevados 2021 | André Viana</p>
+                </div>
+            </div>
+          </ThemeProvider>
         </body>
       </Html>
     )

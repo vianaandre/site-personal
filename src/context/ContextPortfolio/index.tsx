@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-import PortfolioProps from '../../types/PortfolioProps'
+import PortfolioProps  from '../../types/portfolioCardsProps';
 
 const ContextPortfolio = createContext({} as  PortfolioProps)
 

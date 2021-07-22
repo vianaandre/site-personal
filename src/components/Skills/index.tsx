@@ -9,14 +9,14 @@ const Skills: React.FC = () => {
 
   const { data } = useContext(ContextPortfolio)
 
-  const { sectionTitle, cardSkills } = data.sections[5]
+  const allCardskillsContent = data.allCardskills
 
   return (
-    <StyledSkills>
-      <Title  sectionTitle={sectionTitle.sectionTitle} description={sectionTitle.description} effect={true} />
+    <StyledSkills id={'skills'}>
+      <Title  sectionTitle={'Habilidades'} description={'ferramentes que já tenho alguma experiência'} effect={true} />
       <div className="cardsSkills">
-        {cardSkills.map(({ _id, imageCase, nameCase, caseDescription }) => (
-          <CardSkills  key={_id} url={imageCase.url} alternativeText={imageCase.alternativeText}  name={nameCase}  caseDescription={caseDescription} />
+        {allCardskillsContent.allCardskills.map(({ icon, title, text }, index) => (
+          <CardSkills  key={index} icon={icon} title={title} text={text} />
          ))}
       </div>
     </StyledSkills>

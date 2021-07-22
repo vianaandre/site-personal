@@ -5,20 +5,20 @@ import { CardProps } from '../../../types/types';
 import Button from '../../UI/Button';
 import theme from '../../../styles/theme';
 
-const CardProject: React.FC<CardProps> = ({ imageProject, titleProject, buttonActions, cases }) => {
+const CardProject: React.FC<CardProps> = ({ url, alt, description, button, icon }) => {
   return (
     <StyledCardProject >
-      <img src={imageProject.image.url} alt={imageProject.image.url} />
+      <img src={url} alt={alt} />
       <div className="information">
-        <h2>{titleProject.sectionTitle}</h2>
+        <h2>{description}</h2>
         <div className="buttons">
-          {buttonActions.map(( { href, target, title, id } ) => (
-            <Button  key={id}  download={''} font={theme.spacing(1.75 )} height={theme.spacing(3.75)} href={href} target={target} title={title} color={theme.colors.primary} width={theme.spacing(14)} />
+          {button.map(({ href, title }, index) => (
+            <Button key={index} target={'_blank'}  download={''} font={theme.spacing(1.75 )} height={theme.spacing(3.75)} href={href} title={title} color={theme.colors.primary} width={theme.spacing(14)} />
           ) )}
         </div>
         <div className="casesImages">
-          {cases.map(( { image } ) => (
-            <img  key={image.alternativeText} src={image.url} alt={ image.alternativeText} />
+          {icon.map(( { alt, url }, index ) => (
+            <img  key={index} src={url} alt={alt} />
           ))}
         </div>
       </div>

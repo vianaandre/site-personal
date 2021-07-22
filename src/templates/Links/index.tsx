@@ -14,15 +14,15 @@ const Links: React.FC = () => {
     <Container>
       <LinksStyled>
         <Head>
-          <title>{data.title}</title>
+          <title>André | Links</title>
         </Head>
             <header>
               <Logo />
-              <h2>Desenvolvedor Frontend Junior</h2>
+              <h2>Desenvolvedor Frontend Júnior</h2>
             </header>
             <div className={'cardsLinks'}>
-              {data.links.map(({ description, imageSocial, linksSocial, id }) => (
-                <CardLink  key={id}  img={imageSocial[0].url} alt={imageSocial[0].alternativeText} href={linksSocial[0].href} target={linksSocial[0].target} description={description} />
+              {data.allLinks.map(({ href, icon, title }, index) => (
+                <CardLink  key={index}  img={icon.url} alt={icon.alt} href={href} target={'self'} description={title} />
                 ))}
             </div>
         </LinksStyled>

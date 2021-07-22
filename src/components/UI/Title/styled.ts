@@ -3,7 +3,11 @@ import styled from 'styled-components';
 const StyledTitle = styled.div`
   position: relative;
 
-  margin-top: ${props => props.theme.spacing(8)};
+  margin-top: ${props => props.theme.spacing(7)};
+
+  @media(max-width: 767px) {
+    margin-top: ${props => props.theme.spacing(6)};
+  }
 
   div {
     z-index: -1;
@@ -20,7 +24,7 @@ const StyledTitle = styled.div`
     }
   }
 
-  h1 {
+  h2 {
     margin-left: .93rem;
     font-size: ${props => props.theme.spacing(6)};
     font-weight: 700;
@@ -32,7 +36,7 @@ const StyledTitle = styled.div`
     };
 
     @media(max-width: 767px) {
-      font-size: ${props => props.theme.spacing(4)}
+      font-size: ${props => props.theme.spacing(5)};
     }
   }
 
@@ -48,7 +52,7 @@ const StyledTitle = styled.div`
     };
 
     @media(max-width: 767px) {
-      font-size: ${props => props.theme.spacing(1.75)}
+      font-size: ${props => props.theme.spacing(1.5)}
     }
   }
 `;

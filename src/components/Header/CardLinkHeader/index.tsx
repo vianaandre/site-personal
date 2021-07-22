@@ -3,12 +3,11 @@ import React from "react";
 type CardLinkProps = {
   href: string,
   name: string,
-  target: string
 }
 
-const CardLink: React.FC<CardLinkProps> = ({ href, target, name }) => {
+const CardLink: React.FC<CardLinkProps> = ({ href, name }) => {
   return (
-    <a href={href} target={'_' + target}>{name}</a>
+    <a href={href} target='_self'>{name}</a>
   )
 }
 

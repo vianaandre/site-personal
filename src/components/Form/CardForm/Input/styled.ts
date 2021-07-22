@@ -22,6 +22,11 @@ const StyledInput = styled.div`
       outline: none;
       box-shadow: none;
     }
+
+    @media(max-width: 767px) {
+      width: 300px;
+      min-width: 200px;
+    }
   }
 
   .alertError {
@@ -35,6 +40,15 @@ const StyledInput = styled.div`
 
     svg {
       margin-left: ${props => props.theme.spacing(1)};
+    }
+
+    @media(max-width: 767px) {
+      font-size: ${props => props.theme.spacing(1.5)};
+
+      svg {
+        width: 10px;
+        margin-left: ${props => props.theme.spacing(0.5)};
+      }
     }
   }
 

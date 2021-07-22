@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const StyledFooterSites = styled.div`
-
   .listLinks {
 
     margin-top: ${props => props.theme.spacing(2.5)};
@@ -25,6 +24,14 @@ const StyledFooterSites = styled.div`
           border-radius: 5px;
         }
       }
+    }
+  }
+
+  @media(max-width: 767px) {
+    margin-bottom: ${props => props.theme.spacing(1)};
+
+    .listLinks {
+      margin-top: ${props => props.theme.spacing(2)};
     }
   }
 `

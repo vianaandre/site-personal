@@ -1,18 +1,19 @@
 import React from 'react';
 
 import StyledCardInformation from './styled';
-import { ImageProps } from '../../../types/types';
 
-type InformationPersonalProps = { informationPersonal: string }
+type CardInformationProps = {
+  icon: string;
+  alt: string;
+  text: string;
+}
 
-type CardInformationProps = ImageProps & InformationPersonalProps;
-
-const CardInformation: React.FC<CardInformationProps> = ({ url, alternativeText, informationPersonal }) => {
+const CardInformation: React.FC<CardInformationProps> = ({ icon, alt, text }) => {
   return (
     <div>
       <StyledCardInformation>
-        <img src={url} alt={alternativeText} />
-        <p>{informationPersonal}</p>
+        <img src={icon} alt={alt} />
+        <p>{text}</p>
       </StyledCardInformation>
     </div>
   );

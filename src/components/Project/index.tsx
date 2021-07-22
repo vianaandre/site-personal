@@ -9,15 +9,16 @@ const Project: React.FC = () => {
 
   const { data } = useContext(ContextPortfolio)
 
-  const cardData = data.sections[2].CardProject
+  const allCardprojectsContent = data.allCardprojects
+
 
   return (
-    <StyledProject>
-      <Title sectionTitle={data.sections[2].Title.sectionTitle} description={data.sections[2].Title.description} effect={true} />
+    <StyledProject id={'project'}>
+      <Title sectionTitle='Projetos' description={'meus projetos criados com o foco de trazer um pouco das minhas experiências'} effect={true} />
       <div className={'cardProject'}>
-        {cardData.map(({ imageProject, titleProject, buttonActions, cases, id }) => (
-          <div key={id} className={'card'}>
-            <CardProject  imageProject={imageProject} titleProject={titleProject} buttonActions={buttonActions} cases={cases}/>
+        {allCardprojectsContent.allCardprojects.map(({ image, description, button, icon }, index) => (
+          <div key={index} className={'card'}>
+            <CardProject url={image.url} alt={image.atl}  description={description} button={button} icon={ icon }/>
           </div>
         ))}
       </div>

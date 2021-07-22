@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 
 const StyledDescription = styled.div`
+
+  margin-top: ${props => props.theme.spacing(4)};
+  text-align: center;
+
+  @media(max-width: 767px) {
+    margin-top: ${props => props.theme.spacing(2)}
+  }
+
   h1 {
-    font-size: ${props => props.theme.spacing(6)};
+    font-size: ${props => props.theme.spacing(8)};
     font-weight: bold;
     padding: 0;
     margin: 0;
@@ -13,12 +21,14 @@ const StyledDescription = styled.div`
       font-size: ${props => props.theme.spacing(4.5)};
     };
     @media(max-width: 767px) {
-      font-size: ${props => props.theme.spacing(3)}
+      font-size: ${props => props.theme.spacing(4)}
     }
   }
   h2 {
-    font-size: ${props => props.theme.spacing(4.5)};
-    margin-bottom: 1.5rem;
+    font-size: ${props => props.theme.spacing(6)};
+    margin-top: ${props => props.theme.spacing(1)};
+    margin-bottom: ${props => props.theme.spacing(4)};
+    font-weight: 500;
 
     color: ${props => props.theme.colors.colorText};
 
@@ -26,15 +36,19 @@ const StyledDescription = styled.div`
       font-size: ${props => props.theme.spacing(3)};
     };
     @media(max-width: 767px) {
-      font-size: ${props => props.theme.spacing(2.25)}
+      font-size: ${props => props.theme.spacing(3)}
     }
   }
   .text {
+
+    display: flex;
+    justify-content: center;
+
     p {
       font-size: ${props => props.theme.spacing(2.25)};
       width: ${props => props.theme.spacing(44)};
       color: ${props => props.theme.colors.colorText};
-      font-weight: 600;
+      font-weight: 550;
 
       @media(max-width: 1024px) and (min-width: 768px) {
         font-size: ${props => props.theme.spacing(2)};
@@ -44,10 +58,11 @@ const StyledDescription = styled.div`
       font-size: ${props => props.theme.spacing(1.75)};
       line-height: ${props => props.theme.spacing(2)};
       width: 300px;
+      font-weight: 550;
     }
     }
 
-    margin-bottom: 1.5rem;
+    margin-bottom: ${props => props.theme.spacing(5)};
   }
 
   .containerButton {
@@ -57,14 +72,13 @@ const StyledDescription = styled.div`
   }
 
   .btn_action {
-    height: 70px;
+    height: 80px;
     width: 65%;
     background-color: ${props => props.theme.colors.primary};
     border-radius: 5px;
 
     &:hover {
       transform: scale(1.03);
-      transition: 200ms;
     };
 
     @media(max-width: 1024px) and (min-width: 768px) {
@@ -73,6 +87,7 @@ const StyledDescription = styled.div`
 
     @media(max-width: 767px) {
       width: 100%;
+      height: 70px;
 
       &:hover {
         transform: none;

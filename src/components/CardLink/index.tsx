@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CardLinkProps from '../../types/CardLinksProps'
+import { CardLinkProps } from '../../types/types'
 
 const CardLink: React.FC<CardLinkProps> = ({ img, alt, href, target, description }) => {
   return (

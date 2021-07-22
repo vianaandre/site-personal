@@ -1,45 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Logo from '../Logo'
 import CardLink from './CardLinkHeader'
+import MenuNavMobile from './MenuNavMobile';
 import StyledHeader from './styled'
-
-type LinksProps = {
-  href: string,
-  name: string,
-  target: string
-}
-
-const links: Array<LinksProps > = [
-  {
-    href: '/',
-    name: 'Link',
-    target: 'self'
-  },
-  {
-    href: '/portfolio',
-    name: 'Portfólio',
-    target: 'self'
-  },
-  {
-    href: '/blog',
-    name: 'Blog',
-    target: 'self'
-  }
-]
+import links from './data';
 
 const Header: React.FC = () => {
+  const [ state, setState ] = useState(Boolean)
+
+  useEffect(() => {
+    const document = window.innerWidth
+
+    const verificationDocument = document > 767 ? true : false
+
+    setState(verificationDocument)
+  }, [state])
+
   return (
-    <StyledHeader>
+    <StyledHeader id={'header'}>
         <header>
-          <Logo />
-          <nav>
-            {links.map(({ href, name, target }) => (
-               <div key={name} className={'actionLinks'}>
-                <CardLink  href={href} target={target} name={name} />
+          <div className="logo">
+            <Logo />
+          </div>
+          <nav className='nav'>
+            {links.map(({ href, title }) => (
+               <div key={title} className={'actionLinks'}>
+                <CardLink  href={href} name={title} />
               </div>
             ))}
           </nav>
+          <div className="navMobile">
+            <MenuNavMobile />
+          </div>
         </header>
     </StyledHeader>
   )

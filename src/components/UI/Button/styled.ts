@@ -28,7 +28,13 @@ const StyledButton = styled.div`
 
   &:hover {
       transform: scale(1.03);
+  }
+
+  @media (max-width: 767px) {
+    &:hover {
+      transform: none;
     }
+  }
 
 `;
 

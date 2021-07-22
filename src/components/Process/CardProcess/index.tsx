@@ -3,16 +3,26 @@ import React from 'react';
 import StyledCardProcess from './styled';
 
 type CardProcess = {
+  number: number;
   href: string;
   alt: string;
   text: string;
 }
 
-const CardProcess: React.FC<CardProcess> = ({ href, alt, text }) => {
+const CardProcess: React.FC<CardProcess> = ({ number, href, alt, text }) => {
   return (
     <StyledCardProcess>
-      <img src={href} alt={alt} />
-      <div dangerouslySetInnerHTML={{__html: text}}></div>
+      <div className='title'>
+        <h2>{number + 1}ª</h2>
+      </div>
+      <div className="content">
+        <img src={href} alt={alt} />
+        <div>
+          <p>
+            {text}
+          </p>
+        </div>
+      </div>
     </StyledCardProcess>
   )
 }
