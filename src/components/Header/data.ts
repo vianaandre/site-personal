@@ -3,7 +3,7 @@ import { LinksProps } from '../../types/types';
 const links: Array<LinksProps> = [
   {
     href: '/',
-    title: 'Link'
+    title: 'Links'
   },
   {
     href: '/portfolio',

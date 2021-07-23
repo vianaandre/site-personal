@@ -66,10 +66,25 @@ export const allCardprodutosQuery = `{
   }
 }`;
 
+export const allSlugQuery = `{
+  allCardposts {
+    slug
+    title
+    faviconpage {
+      url
+      alt
+    }
+  }
+}`
+
 export const allCardpostsQuery = `{
   allCardposts {
     title
     slug
+    faviconpage {
+      url
+      alt
+    }
     auto
     data
     description {

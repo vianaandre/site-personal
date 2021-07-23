@@ -54,3 +54,115 @@ export type CardLinkProps = {
   target: string;
   description: string;
 }
+
+export type CardPostsProps = {
+  title: string;
+  slug: string;
+  img: {
+    url: string;
+    alt: string;
+  }
+  value: {
+    schema: string,
+    document: {
+      type: string,
+      children: Array<{
+        type: string,
+        children: Array<{
+          type: string,
+          value: string,
+        }>
+      }>
+    }
+  }
+}
+
+export type CardsProdutosProps = {
+  href: string,
+  title: string,
+  store: string,
+  value: {
+    schema: string,
+    document: {
+      type: string,
+      children: [
+        {
+          type: string,
+          children: [
+            {
+              type: string,
+              value: string
+            },
+            {
+              type: string,
+              marks: [
+                string
+              ],
+              value: string;
+            },
+            {
+              type: string,
+              value: string
+            },
+            {
+              type: string,
+              marks: [
+                string
+              ],
+              value: string
+            },
+            {
+              type: string,
+              value: string
+            },
+            {
+              type: string,
+              marks: [
+                string
+              ],
+              value: string
+            },
+            {
+              type: string,
+              value: string
+            },
+            {
+              type: string,
+              marks: [
+                string
+              ],
+              value: string
+            },
+            {
+              type: string,
+              value: string
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+export type ContentProps = Array<{
+  title: string,
+  text: {
+    value: {
+      document: {
+        children: Array<{
+          children: Array<{
+            type: string,
+            children: Array<{
+              type: string,
+              value: string,
+            }>,
+          }>
+        }>
+      }
+    }
+  }
+  images: Array<{
+    url: string,
+    alt: string,
+  }>
+}>

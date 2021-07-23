@@ -18,6 +18,8 @@ const laodDatoCMS = async (query: string): Promise<[]> => {
 
   const data = await response.json()
 
+  console.log(data)
+
   return data.data
 }
 
