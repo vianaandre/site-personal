@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import Header from '../../components/Header';
 import NavBarBlog from '../../components/NavBarBlog';
 import ContextProdutos from '../../context/ContextProdutos';
@@ -7,6 +7,7 @@ import StyledProdutos from '../../styles/pages/Produtos';
 import CardProdutos from '../../components/CardProdutos';
 import Container from '../../styles/container';
 import Footer from '../../components/Footer';
+import ButtonFloat from '../../components/ButtonFloat';
 
 const TemplatesProdutos: React.FC = () => {
 
@@ -29,6 +30,7 @@ const TemplatesProdutos: React.FC = () => {
       </ul>
       </Container>
       <Footer />
+      <ButtonFloat />
     </StyledProdutos>
   )
 }

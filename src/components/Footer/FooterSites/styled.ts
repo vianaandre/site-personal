@@ -12,6 +12,10 @@ const StyledFooterSites = styled.div`
           width: 305px;
           margin-bottom: ${props => props.theme.spacing(2)};
 
+          @media(max-width: 767px) {
+            width: 300px;
+          }
+
           background: #2237FF;
           box-shadow: inset 0px 12px 25px rgba(0, 0, 0, 0.25);
 

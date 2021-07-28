@@ -10,7 +10,7 @@ const CardProdutos: React.FC<CardsProdutosProps> = ({ href, title, store, value 
 
   return (
       <StyledCardProdutos>
-        <a href={href}>
+        <a href={href} target={'_blank'} rel="noreferrer">
           <div className="informationProduto">
           <h2>{title}</h2>
           <h4>{store}</h4>

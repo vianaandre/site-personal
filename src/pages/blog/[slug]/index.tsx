@@ -14,7 +14,6 @@ const Post: React.FC<PostProps> = ({ data }) => {
   const router = useRouter()
 
   if(router.isFallback){
-    console.log(router)
     return <h1>Loading...</h1>
   }
 
@@ -22,8 +21,7 @@ const Post: React.FC<PostProps> = ({ data }) => {
     <>
       <Head>
 
-        <title>{data.title}</title>
-        <link rel="shortcut icon" href={data.faviconpage.url} />
+        <title>André | {data.title}</title>
 
       </Head>
       <ContextPost.Provider value={{ data }}>

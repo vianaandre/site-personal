@@ -9,8 +9,6 @@ import TemplateBlog from '../../templates/Blog';
 
 const Blog: React.FC<BlogPosts> = ({ data }) => {
 
-  console.log(data)
-
   return (
     <ContextBlog.Provider value={{ data }}>
       <TemplateBlog />

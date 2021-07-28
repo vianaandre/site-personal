@@ -55,10 +55,11 @@ const StyledDescription = styled.div`
         width: ${props => props.theme.spacing(40)};
       };
       @media(max-width: 767px) {
-      font-size: ${props => props.theme.spacing(1.75)};
+      font-size: ${props => props.theme.spacing(2)};
       line-height: ${props => props.theme.spacing(2)};
       width: 300px;
       font-weight: 550;
+      color: #000;
     }
     }
 

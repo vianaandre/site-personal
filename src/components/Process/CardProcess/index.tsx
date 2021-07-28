@@ -1,15 +1,13 @@
 import React from 'react';
 
 import StyledCardProcess from './styled';
+import { CardProcessProps } from '../../../types/types';
+import datoStructureTextHTML from '../../../utils/dato-structured-text-html';
 
-type CardProcess = {
-  number: number;
-  href: string;
-  alt: string;
-  text: string;
-}
+const CardProcess: React.FC<CardProcessProps> = ({ number, href, alt, value }) => {
 
-const CardProcess: React.FC<CardProcess> = ({ number, href, alt, text }) => {
+  const textTransform = datoStructureTextHTML(value)
+
   return (
     <StyledCardProcess>
       <div className='title'>
@@ -17,10 +15,7 @@ const CardProcess: React.FC<CardProcess> = ({ number, href, alt, text }) => {
       </div>
       <div className="content">
         <img src={href} alt={alt} />
-        <div>
-          <p>
-            {text}
-          </p>
+        <div dangerouslySetInnerHTML={{ __html: textTransform }}>
         </div>
       </div>
     </StyledCardProcess>

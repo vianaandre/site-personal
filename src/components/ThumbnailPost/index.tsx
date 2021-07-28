@@ -26,27 +26,29 @@ const ThumbnailPost: React.FC = () => {
   return (
     <Container>
       <StyledThumbnailPost>
-        <div className='back'>
-          <Link href={'/blog'}>
-            <a>
-              <Back />
-            </a>
-          </Link>
-        </div>
-        <div className='imgThumb'>
-          <img src={data.thumbnail.url} alt={data.thumbnail.alt} />
-        </div>
-        <div className='informationPost'>
-          <ul className='tags'>
-            {data.tag.map(({ tag }, index) => (
-              <li key={index} >{tag}</li>
-            ))}
-          </ul>
-          <h1>{data.title}</h1>
-          <div className="autorData">
-            <span>{data.auto}</span>
-            <div className='divider'></div>
-            <span>{day + " " + trasnformMonth + " de " + year}</span>
+        <div className="thumbnail">
+          <div className='back'>
+            <Link href={'/blog'}>
+              <a>
+                <Back />
+              </a>
+            </Link>
+          </div>
+          <div className='imgThumb'>
+            <img src={data.thumbnail.url} alt={data.thumbnail.alt} />
+          </div>
+          <div className='informationPost'>
+            <ul className='tags'>
+              {data.tag.map(({ tag }, index) => (
+                <li key={index} >{tag}</li>
+              ))}
+            </ul>
+            <h1>{data.title}</h1>
+            <div className="autorData">
+              <span>{data.auto}</span>
+              <div className='divider'></div>
+              <span>{day + " " + trasnformMonth + " de " + year}</span>
+            </div>
           </div>
         </div>
       </StyledThumbnailPost>

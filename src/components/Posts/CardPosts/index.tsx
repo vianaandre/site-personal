@@ -9,10 +9,6 @@ const CardPosts: React.FC<CardPostsProps> = ({ title, slug, img, value }) => {
 
   const dataText = datoStructureText(value)
 
-  console.log(dataText)
-
-  console.log('alo')
-
   return (
     <StyledCardPosts>
       <Link href={"http://localhost:3000/blog/" + slug}>

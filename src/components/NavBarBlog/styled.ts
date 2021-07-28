@@ -6,6 +6,10 @@ const StyledNavBarBlog = styled.div`
   justify-content: center;
   margin-top: ${props => props.theme.spacing(8)};
 
+  @media(max-width: 767px) {
+    margin-top: ${props => props.theme.spacing(6)};
+  }
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -24,9 +28,20 @@ const StyledNavBarBlog = styled.div`
       font-weight: 600;
       padding: ${props => props.theme.spacing(2)} ${props => props.theme.spacing(8)};
 
+      @media(max-width: 767px) {
+        font-size: ${props => props.theme.spacing(3)};
+        padding: ${props => props.theme.spacing(2)} ${props => props.theme.spacing(3.5)};
+      }
+
       &:hover {
         color: ${props => props.theme.colors.white};
         background-color: ${props => props.theme.colors.primary};
+      }
+      @media(max-width: 767px) {
+        &:hover {
+          color: ${props => props.theme.colors.colorText};
+          background-color: ${props => props.theme.colors.white};
+        }
       }
     }
   }

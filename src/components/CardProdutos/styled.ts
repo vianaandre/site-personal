@@ -5,6 +5,10 @@ const StyledCardProdutos = styled.li`
     width: 305px;
     height: 220px;
 
+    @media (max-width: 767px) {
+      width: 300px;
+    }
+
     overflow: hidden;
 
     display: flex;

@@ -7,9 +7,11 @@ import links from '../../data';
 const Nav: React.FC = () => {
   return (
     <StyledNav>
-      {links.map(({ href, title }, index) => (
-        <CardLink key={index} href={href} name={title} />
-       ))}
+      <nav>
+        {links.map(({ href, title }, index) => (
+          <CardLink key={index} href={href} name={title} />
+        ))}
+       </nav>
     </StyledNav>
   )
 }

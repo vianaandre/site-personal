@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import StyledCardForm from './styled';
 import Input from './Input';
-import useForm from '../../../Hooks/useForm';
+import useForm from '../../../hooks/useForm';
 import ContextForm from '../../../context/ContextForm';
 import SendEmail from '../../../services/sendEmail';
 
@@ -42,7 +42,7 @@ const CardForm: React.FC = () => {
       }
 
     } else {
-      console.log('Não enviar')
+      console.log('Não Enviado')
     }
   }
 

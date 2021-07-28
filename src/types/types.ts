@@ -33,9 +33,44 @@ export type CardProps = {
 }
 
 export type CardProcessProps = {
-  id: string,
-  text: string,
-  image: ImageProps,
+  number: number;
+  href: string;
+  alt: string;
+  value: {
+    schema: string,
+    document: {
+      type: string,
+      children: [
+        {
+          type: string,
+          children: [
+            {
+              type: string,
+              value: string
+            },
+            {
+              type: string,
+              marks: [
+                string
+              ],
+              value: string
+            },
+            {
+              type: string,
+              value: string
+            },
+            {
+              type: string,
+              marks: [
+                string
+              ],
+              value: string
+            }
+          ]
+        }
+      ]
+    }
+  }
 }
 
 export type FormProps = {

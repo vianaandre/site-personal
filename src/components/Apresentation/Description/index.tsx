@@ -11,8 +11,6 @@ type DesciptionProps = {
   text: string,
 }
 
-
-
 const Desciption: React.FC<DesciptionProps> = ({ name, profession, text }) => {
 
   return (

@@ -17,7 +17,7 @@ const Process: React.FC = () => {
       <div className="cardsProcess">
         { allCardprocessesContent.allCardprocesses.map(({ text, image }, index) => (
           <div key={index} className="card">
-            <CardProcess number={index} href={image.url} alt={image.alt} text={text} />
+            <CardProcess number={index} href={image.url} alt={image.alt} value={text.value} />
           </div>
          )) }
       </div>

@@ -10,12 +10,20 @@ const StyledNewsletter = styled.section`
 
   padding-bottom: ${props => props.theme.spacing(5)};
 
+  @media(max-width: 767px) {
+    padding-bottom: ${props => props.theme.spacing(4)};
+  }
+
   .apresentation {
     width: 400px;
     text-align: center;
     margin-top: ${props => props.theme.spacing(-3)};
     background-color: ${props => props.theme.colors.primary};
     padding: ${props => props.theme.spacing(0.75)} 0;
+
+    @media(max-width: 767px) {
+      width: 300px;
+    }
 
     border-radius: 5px;
 
@@ -24,11 +32,16 @@ const StyledNewsletter = styled.section`
       font-weight: bold;
       color: ${props => props.theme.colors.white};
       letter-spacing: 0.6px;
+
+      @media(max-width: 767px) {
+        font-size: ${props => props.theme.spacing(2.25)};
+      }
     }
   }
 
   .calling {
-    margin-top: ${props => props.theme.spacing(3.75)};
+    margin-top: ${props => props.theme.spacing(5)};
+    text-align: center;
 
     p {
       color: ${props => props.theme.colors.white};
@@ -37,40 +50,37 @@ const StyledNewsletter = styled.section`
       text-align: center;
       font-family: ${props => props.theme.fonts.family.primary}, ${props => props.theme.fonts.family.secondary}, ${props => props.theme.fonts.family.tertiary};
       font-weight: 400;
-    }
-  }
 
-  .form {
-    display: flex;
-    margin-top: ${props => props.theme.spacing(3.75)};
-    width: 650px;
-
-    input {
-      width: 100%;
-      border: none;
-      font-size: ${props => props.theme.spacing(2.25)};
-      font-family: ${props => props.theme.fonts.family.primary}, ${props => props.theme.fonts.family.secondary}, ${props => props.theme.fonts.family.tertiary};
-      padding-left: ${props => props.theme.spacing(2.5)};
-      border-radius: 5px 0px 0px 5px;
-      font-weight: 500;
-      color: ${props => props.theme.colors.colorText};
-
-      &:focus {
-        outline: none;
-        box-shadow: none;
+      @media(max-width: 767px) {
+        font-size: ${props => props.theme.spacing(2)};
+        width: 300px;
       }
     }
 
-    button {
-      font-size: ${props => props.theme.spacing(3)};
-      padding: ${props => props.theme.spacing(1.25)} ${props => props.theme.spacing(6)};
+    a {
+      display: block;
+      margin-top: ${props => props.theme.spacing(5)};
 
-      color: ${props => props.theme.colors.white};
-      background-color: ${props => props.theme.colors.primary};
-      border: none;
+      button {
+        width: 300px;
+        border-radius: 5px;
+        background-color: ${props => props.theme.colors.primary};
+        box-shadow: inset 0px 12px 25px rgb(0 0 0 / 25%);
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        font-size: ${props => props.theme.spacing(3)};
+        color: ${props => props.theme.colors.white};
+        padding: ${props => props.theme.spacing(1.25)} 0;
 
-      font-weight: bold;
-      border-radius: 0px 5px 5px 0px;
+        &:hover {
+          transform: scale(1.02);
+
+          @media(max-width: 767px) {
+            transform: none;
+          }
+        }
+      }
     }
   }
 `

@@ -1,22 +1,23 @@
 import React from 'react';
 
-import Container from '../../styles/container';
 import StyledTag from './styled';
 
-const Tags: React.FC = () => {
+type TagsProps = {
+  tags: Array<{ tag: string }>
+}
+
+const Tags: React.FC<TagsProps> = ({ tags }) => {
   return (
-    <Container>
       <StyledTag>
         <h3>Tags:</h3>
         <div className="tags">
           <ul>
-            <li>#tecnologia</li>
-            <li>#programacao</li>
-            <li>#economia</li>
+            {tags.map(({ tag }, index) => (
+              <li key={index} >{tag}</li>
+            ))}
           </ul>
         </div>
       </StyledTag>
-    </Container>
   )
 }
 

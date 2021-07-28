@@ -33,7 +33,9 @@ export const allCardprocessesQuery = `{
       url
       alt
     }
-    text
+    text {
+      value
+    }
   }
 }`;
 

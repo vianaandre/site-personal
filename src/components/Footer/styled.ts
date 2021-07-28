@@ -26,7 +26,7 @@ const StyledFooter = styled.footer`
   flex-wrap: wrap;
 
   @media(max-width: 767px) {
-    margin-top: ${props => props.theme.spacing(16)};
+    margin-top: ${props => props.theme.spacing(8)};
   }
 `
 

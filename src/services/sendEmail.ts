@@ -1,8 +1,8 @@
 type SendProps = {
-  name: string,
-  telefone: string,
+  name?: string,
+  telefone?: string,
   email: string,
-  text: string,
+  text?: string,
 }
 
 const SendEmail = async (data: SendProps): Promise<unknown> => {

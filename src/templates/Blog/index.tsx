@@ -9,6 +9,10 @@ import Share from '../../components/Share';
 import Tags from '../../components/Tags';
 import Newsletter from '../../components/Newsletter';
 import Footer from '../../components/Footer';
+import dataHref from '../../services/Data/datatHref';
+import dataTags from '../../services/Data/dataTags';
+import Container from '../../styles/container';
+import ButtonFloat from '../../components/ButtonFloat';
 
 const TemplateBlog: React.FC = () => {
   return (
@@ -21,10 +25,13 @@ const TemplateBlog: React.FC = () => {
       <Header />
       <NavBarBlog />
       <Posts />
-      <Share />
-      <Tags />
+      <Container>
+        <Share href={dataHref} />
+        <Tags  tags={dataTags} />
+      </Container>
       <Newsletter />
       <Footer />
+      <ButtonFloat />
     </StyledBlog>
   )
 }

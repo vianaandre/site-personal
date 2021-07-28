@@ -25,7 +25,43 @@ type PortfolioProps = {
             url: string,
             alt: string,
           },
-          text: string
+          text: {
+            value: {
+              schema: string,
+              document: {
+                type: string,
+                children: [
+                  {
+                    type: string,
+                    children: [
+                      {
+                        type: string,
+                        value: string
+                      },
+                      {
+                        type: string,
+                        marks: [
+                          string
+                        ],
+                        value: string
+                      },
+                      {
+                        type: string,
+                        value: string
+                      },
+                      {
+                        type: string,
+                        marks: [
+                          string
+                        ],
+                        value: string
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
         }]
     },
     textsobre: {

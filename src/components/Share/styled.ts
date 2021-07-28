@@ -3,7 +3,12 @@ import styled from 'styled-components';
 const StyledShare = styled.section`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: ${props => props.theme.spacing(8)};
+
+  @media(max-width: 767px) {
+    margin-top: ${props => props.theme.spacing(6)}
+  }
 
   h2 {
     font-size: ${props => props.theme.spacing(4.5)};
@@ -13,8 +18,15 @@ const StyledShare = styled.section`
   }
 
   .iconShare {
+
+    display: flex;
+
+    @media(max-width: 767px) {
+      margin-top:  ${props => props.theme.spacing(2)};
+    }
+
     a {
-      margin-right: ${props => props.theme.spacing(2.5)}
+      margin-right: ${props => props.theme.spacing(2.5)};
     }
   }
 `

@@ -6,8 +6,12 @@ const StyledProdutos = styled.div`
     margin-top: ${props => props.theme.spacing(8)};
 
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      margin-top: ${props => props.theme.spacing(6)};
+    }
   }
 `
 

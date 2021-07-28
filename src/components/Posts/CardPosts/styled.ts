@@ -2,20 +2,36 @@ import styled from 'styled-components';
 
 const StyledCardPosts = styled.div`
   a {
-
-
-
     .content {
       width: 305px;
       background-color: ${props => props.theme.colors.white};
 
+      @media(max-width: 767px) {
+        width: 300px;
+      }
+
       padding: ${props => props.theme.spacing(2.5)} ${props => props.theme.spacing(1.75)};
       box-shadow: 0 16px 36px rgb(0 0 0 / 15%);
+
+      @media(max-width: 767px) {
+        box-shadow:  0 16px 36px rgb(0 0 0 / 10%);
+      }
+
+      @media(max-width: 767px) {
+        padding: ${props => props.theme.spacing(1.5)} ${props => props.theme.spacing(1.5)};
+      }
 
       &:hover {
         transform: scale(1.02);
         box-shadow: 0 16px 36px rgb(0 0 0 / 25%);
       };
+
+      @media(max-width: 767px) {
+        &:hover {
+          transform: none;
+          box-shadow:  0 16px 36px rgb(0 0 0 / 10%);
+        }
+      }
 
       .information {
 

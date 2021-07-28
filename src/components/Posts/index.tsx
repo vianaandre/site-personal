@@ -13,7 +13,7 @@ const Posts: React.FC = () => {
     <Container>
       <StyledPosts>
         {data.allCardposts.map(({ title, slug, thumbnail, description }, index) => (
-          <div key={index}>
+          <div key={index} className="postCard">
             <CardPosts title={title} slug={slug} img={thumbnail} value={description.value} />
           </div>
         ))}

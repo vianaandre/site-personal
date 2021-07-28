@@ -10,6 +10,7 @@ const StyledForm = styled.div`
 
   @media(max-width: 767px) {
     padding-top: 0;
+    padding-bottom: ${props => props.theme.spacing(8)};
   }
 
   @media(max-width: 1279px) and (min-width: 1025px) {
