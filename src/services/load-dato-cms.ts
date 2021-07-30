@@ -1,15 +1,12 @@
-const token = '15502c9dfb080316154ea35e637a0a'
-const ULR_BASE = 'https://graphql.datocms.com/'
-
 const laodDatoCMS = async (query: string): Promise<[]> => {
   const response = await fetch(
-    ULR_BASE,
+    process.env.ULR_BASE,
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${process.env.TOKEN}`,
       },
       body: JSON.stringify({
         query: query
