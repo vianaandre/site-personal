@@ -12,6 +12,7 @@ import Skills from '../../components/Skills';
 import Form from '../../components/Form';
 import Footer from '../../components/Footer';
 import ButtonFloat from "../../components/ButtonFloat";
+import Copyrigth from "../../components/Copyrigth";
 
 const TemplatePortfolio: React.FC = () => {
   return (
@@ -30,6 +31,7 @@ const TemplatePortfolio: React.FC = () => {
         <Skills />
         <Form />
         <Footer />
+        <Copyrigth />
         <ButtonFloat />
       </PortfolioStyled>
   )

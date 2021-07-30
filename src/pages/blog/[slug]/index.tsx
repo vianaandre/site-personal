@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 
@@ -9,26 +8,19 @@ import { allCardpostsQuery } from '../../../config/queryes';
 import PostProps from '../../../types/postProps';
 import ContextPost from '../../../context/ContextPost'
 import TemplatePost from '../../../templates/Post';
+import Loading from '../../../templates/Loading';
 
 const Post: React.FC<PostProps> = ({ data }) => {
   const router = useRouter()
 
   if(router.isFallback){
-    return <h1>Loading...</h1>
+    return <Loading />
   }
 
   return (
-    <>
-      <Head>
-
-        <title>André | {data.title}</title>
-
-      </Head>
-      <ContextPost.Provider value={{ data }}>
-        <TemplatePost />
-      </ContextPost.Provider>
-    </>
-
+    <ContextPost.Provider value={{ data }}>
+       <TemplatePost />
+    </ContextPost.Provider>
   )
 };
 
@@ -52,7 +44,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false
+    fallback: true
   }
 }
 
@@ -77,7 +69,9 @@ export const getStaticProps: GetStaticProps<unknown> = async (ctx) => {
     }
   })
 
-  if(data == null) {
+  console.log(data)
+
+  if (!data || !data.allCardposts.length) {
     return {
       notFound: true,
     };

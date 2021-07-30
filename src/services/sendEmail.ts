@@ -6,7 +6,7 @@ type SendProps = {
 }
 
 const SendEmail = async (data: SendProps): Promise<unknown> => {
-  let res
+  let res;
 
   await fetch('https://backend-send-email.herokuapp.com/send', {
     method: 'POST',
@@ -21,7 +21,7 @@ const SendEmail = async (data: SendProps): Promise<unknown> => {
     res = false
   })
 
-  return res
+  return res;
 }
 
 export default SendEmail;

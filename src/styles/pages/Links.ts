@@ -5,6 +5,9 @@ export const LinksStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  min-height: 710px;
+  justify-content: space-between;
 
   header {
       display: flex;

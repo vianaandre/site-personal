@@ -13,6 +13,7 @@ import dataHref from '../../services/Data/datatHref';
 import dataTags from '../../services/Data/dataTags';
 import Container from '../../styles/container';
 import ButtonFloat from '../../components/ButtonFloat';
+import Copyrigth from '../../components/Copyrigth';
 
 const TemplateBlog: React.FC = () => {
   return (
@@ -30,7 +31,8 @@ const TemplateBlog: React.FC = () => {
         <Tags  tags={dataTags} />
       </Container>
       <Newsletter />
-      <Footer />
+      <Footer />]
+      <Copyrigth />
       <ButtonFloat />
     </StyledBlog>
   )

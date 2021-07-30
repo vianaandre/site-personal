@@ -8,6 +8,7 @@ import CardProdutos from '../../components/CardProdutos';
 import Container from '../../styles/container';
 import Footer from '../../components/Footer';
 import ButtonFloat from '../../components/ButtonFloat';
+import Copyrigth from '../../components/Copyrigth';
 
 const TemplatesProdutos: React.FC = () => {
 
@@ -30,6 +31,7 @@ const TemplatesProdutos: React.FC = () => {
       </ul>
       </Container>
       <Footer />
+      <Copyrigth />
       <ButtonFloat />
     </StyledProdutos>
   )

@@ -11,6 +11,8 @@ import Tags from '../../components/Tags';
 import Newsletter from '../../components/Newsletter';
 import Footer from '../../components/Footer';
 import ButtonFloat from '../../components/ButtonFloat';
+import Copyrigth from '../../components/Copyrigth';
+import Head from 'next/head';
 
 const TemplatePost: React.FC = () => {
 
@@ -34,6 +36,11 @@ const TemplatePost: React.FC = () => {
 
   return (
     <StyledTemplatePost>
+      <Head>
+
+          <title>André | {data.title}</title>
+
+      </Head>
         <Header />
         <Container>
           <div className="contentPost">
@@ -47,6 +54,7 @@ const TemplatePost: React.FC = () => {
       </Container>
       <Newsletter />
       <Footer />
+      <Copyrigth />
       <ButtonFloat />
     </StyledTemplatePost>
   )

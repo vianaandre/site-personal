@@ -6,6 +6,7 @@ import { LinksStyled } from '../../styles/pages/Links';
 import Container from '../../styles/container';
 import CardLink from '../../components/CardLink';
 import Logo from '../../components/Logo';
+import Copyrigth from '../../components/Copyrigth';
 
 const Links: React.FC = () => {
   const { data } = useContext(ContextLinks)
@@ -25,6 +26,7 @@ const Links: React.FC = () => {
                 <CardLink  key={index}  img={icon.url} alt={icon.alt} href={href} target={'self'} description={title} />
                 ))}
             </div>
+          <Copyrigth />
         </LinksStyled>
       </Container>
   )

@@ -1,8 +1,16 @@
 import React from 'react';
 
+import { CircularProgress } from '@material-ui/core';
+import StyledLoading from '../../styles/pages/Loading';
+import theme from '../../styles/theme';
+
 const Loading: React.FC = () => {
   return (
-    <h1>Loading...</h1>
+    <StyledLoading>
+      <div className="circularProgress">
+        <CircularProgress size={120} style={{ color: theme.colors.primary }} />
+      </div>
+    </StyledLoading>
   )
 }
 

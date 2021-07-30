@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components';
 import { ServerStyleSheet } from 'styled-components';
 
 import theme from '../styles/theme';
-import Copyrigth from '../assets/copyrigth.svg';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -48,12 +47,6 @@ export default class MyDocument extends Document {
           <ThemeProvider theme={theme}>
             <Main />
             <NextScript />
-            <div className='containerCopyrigth'>
-                <div className="copyrigth">
-                  <Copyrigth />
-                  <p>Direitos resevados 2021 | André Viana</p>
-                </div>
-            </div>
           </ThemeProvider>
         </body>
       </Html>
