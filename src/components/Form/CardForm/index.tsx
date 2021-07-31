@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import StyledCardForm from './styled';
 import Input from './Input';
-import useForm from '../../../hooks/useForm';
+import useForm from '../../../Hooks/useForm';
 import ContextForm from '../../../context/ContextForm';
 import SendEmail from '../../../services/sendEmail';
 
