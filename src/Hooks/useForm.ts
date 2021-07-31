@@ -16,7 +16,7 @@ const types = {
   },
   telefone: {
     regex: /^\s?[0-9]{2}\s?[0-9]{4,5}[0-9]{4}$/,
-    message: 'Telefone Inválido',
+    message: 'Número de Telefone Inválido',
   },
   email: {
     regex: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]?)*$/,
