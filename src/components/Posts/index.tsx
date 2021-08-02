@@ -4,6 +4,7 @@ import ContextBlog from '../../context/ContextBlog';
 import StyledPosts from './styled';
 import CardPosts from './CardPosts';
 import Container from '../../styles/container';
+import Without from '../Without';
 
 const Posts: React.FC = () => {
 
@@ -12,11 +13,12 @@ const Posts: React.FC = () => {
   return (
     <Container>
       <StyledPosts>
-        {data.allCardposts.map(({ title, slug, thumbnail, description }, index) => (
+        {data.allCardposts.length > 0 ? data.allCardposts.map(({ title, slug, thumbnail, description }, index) => (
           <div key={index} className="postCard">
             <CardPosts title={title} slug={slug} img={thumbnail} value={description.value} />
           </div>
-        ))}
+        )) : <Without currentText={'Posts'} />}
+
       </StyledPosts>
      </Container>
   )

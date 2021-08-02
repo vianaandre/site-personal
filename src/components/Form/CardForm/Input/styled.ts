@@ -38,7 +38,7 @@ const StyledInput = styled.div`
       color: red;
     }
 
-    svg {
+    img {
       margin-left: ${props => props.theme.spacing(1)};
     }
 

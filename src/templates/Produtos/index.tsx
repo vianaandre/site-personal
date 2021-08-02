@@ -9,6 +9,7 @@ import Container from '../../styles/container';
 import Footer from '../../components/Footer';
 import ButtonFloat from '../../components/ButtonFloat';
 import Copyrigth from '../../components/Copyrigth';
+import Without from '../../components/Without';
 
 const TemplatesProdutos: React.FC = () => {
 
@@ -24,11 +25,13 @@ const TemplatesProdutos: React.FC = () => {
       <Header />
       <NavBarBlog />
       <Container>
-      <ul className="produtos">
-        {data.allCardprodutos.map(({ href, title, store, description }, index) => (
-          <CardProdutos key={index} href={href} title={title} store={store} value={description.value}/>
-        ))}
-      </ul>
+        <div className={'secaoProdutos'}>
+          {data.allCardprodutos.length > 0 ? <ul className="produtos">
+            {data.allCardprodutos.map(({ href, title, store, description }, index) => (
+              <CardProdutos key={index} href={href} title={title} store={store} value={description.value}/>
+            ))}
+          </ul> : <Without currentText={'Produtos'} />}
+        </div>
       </Container>
       <Footer />
       <Copyrigth />
