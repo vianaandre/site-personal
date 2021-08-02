@@ -11,7 +11,7 @@ const CardPosts: React.FC<CardPostsProps> = ({ title, slug, img, value }) => {
 
   return (
     <StyledCardPosts>
-      <Link href={"http://localhost:3000/blog/" + slug}>
+      <Link href={"http://andreviana.vercel.app/blog/" + slug}>
         <a>
           <div className="content">
               <img src={img.url} alt={img.alt} />
