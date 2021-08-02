@@ -102,10 +102,16 @@ const StyledDescription = styled.div`
          p {
             font-size: ${props => props.theme.spacing(3)};
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: bold;
+            letter-spacing: 1px;
             color: ${({ theme }) => theme.colors.white};
             margin-right: 10px;
             font-family: ${({ theme }) => theme.fonts.family.primary}
+      }
+
+      img {
+        width: 20px;
+        height: 11px;
       }
     }
 

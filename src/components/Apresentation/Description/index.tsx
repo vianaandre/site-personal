@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 import StyledDescription from './styled';
-import ButtonDown from '../../../assets/ButtonDown.svg';
 
 
 type DesciptionProps = {
@@ -28,7 +27,7 @@ const Desciption: React.FC<DesciptionProps> = ({ name, profession, text }) => {
             <button className="btn_action">
               <div>
                 <p>Contato</p>
-                <ButtonDown />
+                <img src={'/assets/buttonDown.svg'} alt="Botão de ir para Baixo" />
               </div>
             </button>
         </Link>

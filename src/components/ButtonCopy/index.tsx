@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 import StyledButton from './styled';
-import ShareLink from '../../assets/shareLink.svg';
-import Check from '../../assets/check.svg';
 
 const ButtonCopy: React.FC = () => {
   const [ urlCurrent, setUrlCurrent ] = useState(String)
@@ -28,9 +26,9 @@ const ButtonCopy: React.FC = () => {
     <StyledButton>
       <button onClick={copyUrl}>
         { sucess ? <div className="check">
-          <Check />
+          <img src={'/assets/check.svg'} alt="Logo de Check" />
           <p>Copiado</p>
-        </div> : <ShareLink /> }
+        </div> : <img src={'/assets/shareLink.svg'} alt="Logo de Link" /> }
       </button>
     </StyledButton>
   )

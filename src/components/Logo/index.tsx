@@ -1,6 +1,5 @@
 import React from 'react';
 
-import ImageLogo from '../../assets/logo.svg';
 import StyledLogo from './styled';
 
 const Logo: React.FC = () => {
@@ -8,7 +7,7 @@ const Logo: React.FC = () => {
     <StyledLogo>
       <div className="logo">
         <div className="img">
-          <ImageLogo />
+          <img src={'/assets/logo.svg'} alt="Logo do Site" />
         </div>
         <h1>André Vi<span>ana</span></h1>
       </div>

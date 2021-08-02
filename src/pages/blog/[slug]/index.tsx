@@ -44,7 +44,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true
+    fallback: false
   }
 }
 
@@ -68,14 +68,6 @@ export const getStaticProps: GetStaticProps<unknown> = async (ctx) => {
        numberPostCurrent = index
     }
   })
-
-  console.log(data)
-
-  if (!data || !data.allCardposts.length) {
-    return {
-      notFound: true,
-    };
-  }
 
   return {
     props: {

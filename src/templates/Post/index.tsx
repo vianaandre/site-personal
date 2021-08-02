@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import Head from 'next/head';
 
 import StyledTemplatePost from '../../styles/pages/Post';
 import Header from '../../components/Header';
@@ -12,7 +13,6 @@ import Newsletter from '../../components/Newsletter';
 import Footer from '../../components/Footer';
 import ButtonFloat from '../../components/ButtonFloat';
 import Copyrigth from '../../components/Copyrigth';
-import Head from 'next/head';
 
 const TemplatePost: React.FC = () => {
 

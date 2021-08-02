@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head'
 
 import StyledNotFound from '../../styles/pages/NotFound';
-import ArrowBack from '../../assets/backPageNotfound.svg';
 import Container from '../../styles/container';
 
 const NotFound: React.FC = () => {
@@ -21,7 +20,7 @@ const NotFound: React.FC = () => {
         </div>
         <h2>Essa página não existe amigo!</h2>
         <a href="/" className={'initial'}>
-          <ArrowBack />
+          <img src={'/assets/backPageNotfound.svg'} alt="Ícone de Voltar" />
           <p>Voltar para página inicial</p>
         </a>
         <span>ou</span>

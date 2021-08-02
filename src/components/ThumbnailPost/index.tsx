@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Container from '../../styles/container';
 import StyledThumbnailPost from './styled';
 import allMonth from '../../services/Data/month';
-import Back from '../../assets/back.svg';
 
 
 const ThumbnailPost: React.FC = () => {
@@ -30,7 +29,7 @@ const ThumbnailPost: React.FC = () => {
           <div className='back'>
             <Link href={'/blog'}>
               <a>
-                <Back />
+                <img src={'/assets/back.svg'} alt="Ícone de Voltar" />
               </a>
             </Link>
           </div>

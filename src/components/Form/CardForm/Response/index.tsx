@@ -3,8 +3,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { CircularProgress } from '@material-ui/core';
 import StyledResponse from './styled';
 import ContextForm from '../../../../context/ContextForm';
-import Sucess from '../../../../assets/sucess.svg';
-import Error from '../../../../assets/error.svg';
 import theme from '../../../../styles/theme';
 
 type ResponseProps = {
@@ -32,7 +30,7 @@ const Response: React.FC<ResponseProps> = ({ response, colorFont, colorBackgroun
         <p style={{ color: colorFont }} >
           {response}
         </p>
-        {request ? <Sucess /> : <Error />}
+        {request ? <img src={'/assets/sucess.svg'} alt="Ícone de Sucess" /> : <img src={'/assets/error.svg'} alt="Ícone de Erro" /> }
       </div> : <div className="circularProgress" >
         <CircularProgress size={documentWidth ? 100 : 60} style={{ color: theme.colors.primary}} />
       </div>

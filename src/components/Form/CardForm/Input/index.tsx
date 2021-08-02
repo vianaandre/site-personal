@@ -2,7 +2,6 @@ import React from 'react';
 
 import { FormProps } from '../../../../types/types';
 import StyledInput from './styled';
-import AlertError from '../../../../assets/alertError.svg';
 
 const Input: React.FC<FormProps> = ({ value, type, placeholder, id, error, handleChange, onBlur }) => {
   return (
@@ -19,7 +18,7 @@ const Input: React.FC<FormProps> = ({ value, type, placeholder, id, error, handl
       />
       {error && <div className='alertError'>
         <p>{error}</p>
-        <AlertError />
+        <img src={'/assets/alertError.svg'} alt="Ícone de Alert" />
       </div> }
     </StyledInput>
   )

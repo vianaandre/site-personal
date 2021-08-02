@@ -11,10 +11,16 @@ const StyledResponse = styled.div`
 
     margin-top: ${props => props.theme.spacing(1)};
 
+    img {
+      margin-top: ${props => props.theme.spacing(6)}
+    }
+
     @media (max-width: 767px) {
+      width: 300px;
       margin-top: ${props => props.theme.spacing(3)};
-      padding: ${props => props.theme.spacing(4)};
+      padding-top: ${props => props.theme.spacing(3)};
       padding-right: ${props => props.theme.spacing(2)};
+      padding-left: ${props => props.theme.spacing(3)};
     }
 
     p {
