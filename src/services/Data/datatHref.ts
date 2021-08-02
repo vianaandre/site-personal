@@ -1,7 +1,7 @@
 const dataHrefs = [
-  'http://localhost:3000/blog/',
-  'http://localhost:3000/blog/',
-  'Blog sobre Tecnologia, Programação e Ecnonomia+http://localhost:3000/blog/'
+  'http://andreviana.vercel.app/blog/',
+  'http://andreviana.vercel.app/',
+  'Blog sobre Tecnologia, Programação e Ecnonomia+http://andreviana.vercel.app/blog/'
 ]
 
 export default dataHrefs;

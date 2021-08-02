@@ -6,7 +6,7 @@ const dataTags = [
     tag: '#programacao'
   },
   {
-    tag: '#economia'
+    tag: '#frontend'
   }
 ]
 
