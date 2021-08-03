@@ -81,6 +81,7 @@ export const allSlugQuery = `{
 
 export const allCardpostsQuery = `{
   allCardposts {
+    descriptiontext
     title
     slug
     faviconpage {

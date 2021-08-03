@@ -38,9 +38,18 @@ export default class MyDocument extends Document {
       <Html lang="PT-BR">
         <Head>
           <meta charSet="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta  name="theme-color" content="#2237FF" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet" />
           <link rel="shortcut icon" href="https://res.cloudinary.com/andreimagens/image/upload/v1625249601/logo_5bfc398a62.svg" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fffff" />
+          <meta name="msapplication-TileColor" content="#ffffff" />
+          <meta name="theme-color" content="#ffffff" />
         </Head>
 
         <body>

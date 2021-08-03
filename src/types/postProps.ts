@@ -2,6 +2,7 @@ import { ContentProps } from './types'
 
 type PostProps = {
   data: {
+    descriptiontext: string,
     title: string,
     slug: string,
     faviconpage: {

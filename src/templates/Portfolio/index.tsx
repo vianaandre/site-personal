@@ -20,6 +20,11 @@ const TemplatePortfolio: React.FC = () => {
         <Head>
 
           <title>André | Portfólio</title>
+          <meta name="description" content="Criado com o objetivo de poder compartilhar meus projetos, detalher meu processo de desenvolvimento e ainda listar minhas habilidades" />
+          <meta property="og:type" content="website" />
+          <meta  property="og:title" content="André | Portfólio Pessoal" />
+          <meta  property="og:description" content="Criado com o objetivo de poder compartilhar meus projetos, detalher meu processo de desenvolvimento e ainda listar minhas habilidades"/>
+          <meta property="og:url" content="http://andreviana.vercel.app/portfolio" />
 
         </Head>
         <Header />

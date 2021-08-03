@@ -39,6 +39,11 @@ const TemplatePost: React.FC = () => {
       <Head>
 
           <title>André | {data.title}</title>
+          <meta name="description" content={data.descriptiontext} />
+          <meta property="og:type" content="article"/>
+          <meta  property="og:title" content={`André | ${data.title}`} />
+          <meta  property="og:description" content={data.descriptiontext} />
+          <meta property="og:url" content={`http://andreviana.vercel.app/blog/${data.slug}`} />
 
       </Head>
         <Header />

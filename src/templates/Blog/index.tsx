@@ -21,6 +21,11 @@ const TemplateBlog: React.FC = () => {
       <Head>
 
         <title>André | Blog</title>
+        <meta name="description" content="Artigos criados com o objetivo de compartilhar o conhecimento que vou adquirindo na programação, através de livros e cursos" />
+        <meta property="og:type" content="blog"/>
+        <meta  property="og:title" content="André | Blog sobre Programação" />
+        <meta  property="og:description" content="Artigos criados com o objetivo de compartilhar o conhecimento que vou adquirindo na programação, através de livros e cursos"/>
+        <meta property="og:url" content="http://andreviana.vercel.app/blog" />
 
       </Head>
       <Header />
