@@ -72,10 +72,6 @@ export const allSlugQuery = `{
   allCardposts {
     slug
     title
-    faviconpage {
-      url
-      alt
-    }
   }
 }`
 
@@ -84,10 +80,6 @@ export const allCardpostsQuery = `{
     descriptiontext
     title
     slug
-    faviconpage {
-      url
-      alt
-    }
     auto
     data
     description {

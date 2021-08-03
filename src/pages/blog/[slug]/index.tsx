@@ -30,10 +30,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const data:  {
     allCardposts: Array<{
       slug: string,
-      faviconpage: {
-        url: string,
-        alt: string
-      }
       title: string,
     }>
   } = await loadDatoCMS(allSlugQuery)
@@ -55,10 +51,6 @@ export const getStaticProps: GetStaticProps<unknown> = async (ctx) => {
   const data: {
     allCardposts: Array<{
       slug: string,
-      faviconpage: {
-        url: string,
-        alt: string
-      }
       title: string,
     }>
   }   = await loadDatoCMS(allCardpostsQuery)

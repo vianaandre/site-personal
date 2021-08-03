@@ -35,12 +35,18 @@ const StyledContentPost = styled.div`
     }
 
     .textPost {
+      width: 80%;
       margin-top: ${props => props.theme.spacing(2)};
+
+      @media(max-width: 767px) {
+        width: 100%;
+      }
 
       p {
         font-size: ${props => props.theme.spacing(2.25)};
         font-weight: 450;
         color: ${props => props.theme.colors.colorText};
+        line-height: ${props => props.theme.spacing(4.5)};
 
         @media(max-width: 767px) {
           font-size: ${props => props.theme.spacing(1.75)}

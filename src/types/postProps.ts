@@ -5,10 +5,6 @@ type PostProps = {
     descriptiontext: string,
     title: string,
     slug: string,
-    faviconpage: {
-      url: string,
-      alt: string,
-    }
     auto: string,
     data: string
     tag: Array<{
