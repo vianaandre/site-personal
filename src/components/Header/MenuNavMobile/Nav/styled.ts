@@ -9,7 +9,7 @@ const StyledNav = styled.div`
   align-items: center;
   align-self: center;
   width: 70vw;
-  height: 85%;
+  height: 100%;
 
   nav {
 
@@ -17,7 +17,7 @@ const StyledNav = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 60vw;
+    height: 70vw;
 
     a {
     text-align: center;
