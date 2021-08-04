@@ -17,6 +17,10 @@ const StyledNavBarBlog = styled.div`
     border-radius: 5px;
     overflow: hidden;
 
+    @media(max-width: 767px) {
+      width: 300px;
+    }
+
     .color {
       background-color: ${props => props.theme.colors.primary};
       color: ${props => props.theme.colors.white}
@@ -29,8 +33,10 @@ const StyledNavBarBlog = styled.div`
       padding: ${props => props.theme.spacing(2)} ${props => props.theme.spacing(8)};
 
       @media(max-width: 767px) {
-        font-size: ${props => props.theme.spacing(3)};
+        width: 50%;
+        font-size: ${props => props.theme.spacing(2)};
         padding: ${props => props.theme.spacing(2)} ${props => props.theme.spacing(3.5)};
+        text-align: center;
       }
 
       &:hover {

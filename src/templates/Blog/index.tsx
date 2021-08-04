@@ -36,7 +36,7 @@ const TemplateBlog: React.FC = () => {
         <Tags  tags={dataTags} />
       </Container>
       <Newsletter />
-      <Footer />]
+      <Footer />
       <Copyrigth />
       <ButtonFloat />
     </StyledBlog>

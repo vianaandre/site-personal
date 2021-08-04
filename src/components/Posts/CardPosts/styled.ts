@@ -44,11 +44,11 @@ const StyledCardPosts = styled.div`
 
         .text {
           font-size: ${props => props.theme.spacing(1.75)};
-          margin-top: ${props => props.theme.spacing(1.25)};
+          margin-top: ${props => props.theme.spacing(2)};
           color: ${props => props.theme.colors.colorText};
           opacity: 0.8;
           display: -webkit-box;
-          -webkit-line-clamp: 3; /** número de linhas que você quer exibir */
+          -webkit-line-clamp: 2; /** número de linhas que você quer exibir */
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
