@@ -13,7 +13,7 @@ const CardProject: React.FC<CardProps> = ({ url, alt, description, button, icon 
         <h2>{description}</h2>
         <div className="buttons">
           {button.map(({ href, title }, index) => (
-            <Button key={index} target={'_blank'}  download={''} font={theme.spacing(1.75 )} height={theme.spacing(3.75)} href={href} title={title} color={theme.colors.primary} width={theme.spacing(14)} />
+            <Button key={index} target={'_blank'} font={theme.spacing(1.75 )} height={theme.spacing(3.75)} href={href} title={title} color={theme.colors.primary} width={theme.spacing(14)} />
           ) )}
         </div>
         <div className="casesImages">

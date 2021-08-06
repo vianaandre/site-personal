@@ -8,7 +8,7 @@ type StyledButtonProps = {
   width: string;
   font: string;
   height: string;
-  download: string,
+  download?: string,
   target: string;
 }
 
