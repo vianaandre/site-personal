@@ -5,6 +5,7 @@ const StyledDescription = styled.div`
   margin-top: ${props => props.theme.spacing(4)};
   text-align: center;
 
+
   @media(max-width: 767px) {
     margin-top: ${props => props.theme.spacing(2)}
   }
@@ -39,31 +40,27 @@ const StyledDescription = styled.div`
       font-size: ${props => props.theme.spacing(3)}
     }
   }
-  .text {
 
+  .divider {
+
+    width: 100%;
     display: flex;
     justify-content: center;
+    gap: 15px;
 
-    p {
-      font-size: ${props => props.theme.spacing(2.25)};
-      width: ${props => props.theme.spacing(44)};
-      color: ${props => props.theme.colors.colorText};
-      font-weight: 550;
+    margin: 46px auto;
+    margin-bottom: ${props => props.theme.spacing(6)};
 
-      @media(max-width: 1024px) and (min-width: 768px) {
-        font-size: ${props => props.theme.spacing(2)};
-        width: ${props => props.theme.spacing(40)};
-      };
-      @media(max-width: 767px) {
-      font-size: ${props => props.theme.spacing(2)};
-      line-height: ${props => props.theme.spacing(2)};
-      width: 300px;
-      font-weight: 550;
-      color: #000;
-    }
+    @media(max-width: 767px) {
+      gap: 10px;
     }
 
-    margin-bottom: ${props => props.theme.spacing(5)};
+    div {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: ${props => props.theme.colors.secondary};
+    }
   }
 
   .containerButton {

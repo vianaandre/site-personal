@@ -7,21 +7,20 @@ import StyledDescription from './styled';
 type DesciptionProps = {
   name: string,
   profession: string,
-  text: string,
 }
 
-const Desciption: React.FC<DesciptionProps> = ({ name, profession, text }) => {
+const Desciption: React.FC<DesciptionProps> = ({ name, profession }) => {
 
   return (
       <StyledDescription>
         <h1>{name}</h1>
         <h2>{profession}</h2>
-        <div className='text'>
-          <p>
-            <i>
-              {text}
-            </i>
-          </p>
+        <div className={'divider'}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
         <Link to={'Contact'} smooth={true} duration={1000}>
             <button className="btn_action">

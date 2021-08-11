@@ -33,6 +33,10 @@ const StyledApresentation = styled.div`
     width: 5px;
     background-color: ${props => props.theme.colors.primary};
     border-radius: 10px;
+
+    @media(max-width: 767px) {
+      display: none;
+    }
   }
 
 
