@@ -15,7 +15,9 @@ const CardProdutos: React.FC<CardsProdutosProps> = ({ href, title, store, value 
           <h2>{title}</h2>
           <h4>{store}</h4>
           </div>
-          <p>{valueTransforme}</p>
+          <div className="textProduct">
+            {valueTransforme}
+          </div>
         </a>
       </StyledCardProdutos>
   )

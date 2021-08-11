@@ -37,12 +37,12 @@ const StyledCardProdutos = styled.li`
       }
       }
 
-    p {
+    .textProduct {
       font-size: ${props => props.theme.spacing(2)};
       color: ${props => props.theme.colors.colorText};
       font-weight: 500;
       display: -webkit-box;
-      -webkit-line-clamp: 4; /** número de linhas que você quer exibir */
+      -webkit-line-clamp: 3; /** número de linhas que você quer exibir */
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
