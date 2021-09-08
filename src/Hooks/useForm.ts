@@ -23,8 +23,8 @@ const types = {
     message: 'Email Inválido'
   },
   text: {
-    regex: "",
-    message: "",
+    regex: /[a-z][a-zA-Z0-9]{0,200}/,
+    message: "Texto com muito caracteres, diminua a quantidade",
   }
 }
 
