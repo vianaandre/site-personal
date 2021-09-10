@@ -5,6 +5,7 @@ const StyledCardPosts = styled.div`
     .content {
       width: 305px;
       background-color: ${props => props.theme.colors.white};
+      height: 390px;
 
       @media(max-width: 767px) {
         width: 300px;
@@ -34,6 +35,10 @@ const StyledCardPosts = styled.div`
       }
 
       .information {
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         h2 {
           font-size: ${props => props.theme.spacing(3)};
@@ -44,7 +49,6 @@ const StyledCardPosts = styled.div`
 
         .text {
           font-size: ${props => props.theme.spacing(1.75)};
-          margin-top: ${props => props.theme.spacing(2)};
           color: ${props => props.theme.colors.colorText};
           opacity: 0.8;
           display: -webkit-box;
