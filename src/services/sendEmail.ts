@@ -10,7 +10,7 @@ const SendEmail = async (data: SendProps): Promise<unknown> => {
 
   console.log(data)
 
-  await fetch('http://localhost:8080/send', {
+  await fetch('http://https://app-backend-send-email.herokuapp.com/send', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
