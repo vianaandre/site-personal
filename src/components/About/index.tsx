@@ -32,7 +32,7 @@ const About: React.FC = () => {
             ))}
             </ul>
             <button>
-              <a href={'/cv_andre.pdf'} target={'black'} download={'Currículo - André'}>
+              <a href={'/Curriculo-Andre.pdf'} target={'black'} download={'Currículo - André'}>
                   <p>
                     Download do meu CV
                   </p>
