@@ -18,7 +18,7 @@ const information: Array<InformationProps> = [
   {
     icon: '/assets/phone.svg',
     alt: 'Ícone de Phone',
-    text: '(+55) 45 98804-0665'
+    text: '(+55) 45 98837-8294'
   }
 ]
 
